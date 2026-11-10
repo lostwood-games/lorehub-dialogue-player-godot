@@ -1,7 +1,7 @@
 name: CI
 
 # Pull requests and pushes to main: headless tests on the oldest supported and current Godot.
-# A pushed v* tag (v0.0.0): the tests, then a check that the tag matches plugin.cfg, a zip holding only
+# A pushed v* tag (v0.1.0): the tests, then a check that the tag matches plugin.cfg, a zip holding only
 # addons/lorehub_dialogue (with LICENSE and README), a GitHub release with that zip and the version's CHANGELOG.md
 # section, and a job summary with the fields to paste into the Godot Asset Store. The store has no upload API yet
 # (a CLI is on store.godotengine.org/roadmap), so the zip is uploaded by hand in the asset's Versions tab.

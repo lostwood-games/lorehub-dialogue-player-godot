@@ -102,7 +102,7 @@ godot --headless --path . -s res://tests/run_tests.gd
 
 ## Versions
 
-The addon's version follows the OSF schema version; 0.0.0 is the first build. It reads LoreHub's Export Schema 2.x
+The addon's version follows the OSF schema version; 0.1.0 is the first build. It reads LoreHub's Export Schema 2.x
 JSON today and refuses a file from an unknown major schema version with an error that says to update the addon.
 
 ## Releasing
