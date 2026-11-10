@@ -215,3 +215,29 @@ func test_stop_from_a_handler() -> void:
 	runner.start()
 	check(not runner.is_running(), "stopped")
 	check(not presented[0], "no choices after stop() in line_started")
+
+
+func test_later_reference_is_part_of_the_line_and_dialogue_name() -> void:
+	var dialogue := Dialogue.from_data({
+		"type": "@lorehub/export-schema",
+		"apiVersion": "2.0.0",
+		"resources": [
+			{"type": "@lorehub/dialogue", "apiVersion": "2.0.0", "id": "dialogue/d1", "name": "Scene 01"},
+			{"type": "@lorehub/document", "apiVersion": "1.0.0", "id": "doc-kael", "name": "Kael"},
+			{"type": "@lorehub/document", "apiVersion": "1.0.0", "id": "doc-oliver", "name": "Oliver"},
+			{"type": "@lorehub/dialogue-node", "apiVersion": "2.0.0", "id": "dialogue/d1/dialogue-node/n1", "contentBlockId": "n1"},
+			{"type": "@lorehub/content-block", "apiVersion": "1.0.0", "id": "n1", "content": [
+				{"documentId": "doc-kael", "text": null},
+				{"text": "Have you seen"},
+				{"documentId": "doc-oliver", "text": null},
+				{"text": "today?"},
+			]},
+			{"type": "@lorehub/dialogue-link", "apiVersion": "1.0.0", "id": "dialogue/d1/dialogue-link/l1", "from": "dialogue/d1", "to": "dialogue/d1/dialogue-node/n1"},
+		],
+	})
+	check_eq(dialogue.get_dialogue_name(), "Scene 01", "the dialogue name is read")
+	var runner := Runner.new(dialogue)
+	runner.start()
+	var line := runner.get_current_line()
+	check_eq(line.speaker_name, "Kael", "the first reference is the speaker")
+	check_eq(line.text, "Have you seen\nOliver\ntoday?", "a later reference keeps its text in the line")

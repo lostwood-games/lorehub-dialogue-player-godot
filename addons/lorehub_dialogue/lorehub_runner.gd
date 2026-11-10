@@ -268,13 +268,16 @@ func _build_line(node_id: String) -> _Line:
 		var document_id = part.get("documentId")
 		var part_text = part.get("text")
 		if document_id != null and str(document_id) != "":
+			var reference_text := (
+				str(part_text) if part_text != null and str(part_text) != "" else dialogue.get_document_name(str(document_id))
+			)
 			if line.speaker_id == "":
+				# The first reference is the speaker.
 				line.speaker_id = str(document_id)
-				line.speaker_name = (
-					str(part_text)
-					if part_text != null and str(part_text) != ""
-					else dialogue.get_document_name(line.speaker_id)
-				)
+				line.speaker_name = reference_text
+			elif reference_text != "":
+				# A later reference is part of the line, for example a character mentioned by name.
+				texts.append(reference_text)
 		elif part_text != null:
 			texts.append(str(part_text))
 	line.text = "\n".join(texts)
