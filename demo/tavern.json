@@ -2,330 +2,330 @@
   "type": "@lorehub/export-schema",
   "apiVersion": "2.0.0",
   "resources": [
-    {
-      "type": "@lorehub/dialogue",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c",
-      "name": "Tavern: Kael the barkeep"
-    },
-    {
-      "type": "@lorehub/variable",
-      "apiVersion": "1.0.0",
-      "id": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
-      "name": "gold",
-      "variableType": "unsignedNumber",
-      "defaultValue": "5"
-    },
-    {
-      "type": "@lorehub/variable",
-      "apiVersion": "1.0.0",
-      "id": "f7fbdcd0-60ac-407e-9239-bb3214119298",
-      "name": "met_kael",
-      "variableType": "boolean",
-      "defaultValue": "false"
-    },
-    {
-      "type": "@lorehub/variable",
-      "apiVersion": "1.0.0",
-      "id": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
-      "name": "trust",
-      "variableType": "number",
-      "defaultValue": "0"
-    },
-    {
-      "type": "@lorehub/document",
-      "apiVersion": "1.0.0",
-      "id": "ca2f5193-a3e0-41dd-830a-491132090d34",
-      "name": "Kael"
-    },
-    {
-      "type": "@lorehub/document",
-      "apiVersion": "1.0.0",
-      "id": "031476c0-2504-4ed7-aa79-e5fce21e2091",
-      "name": "Oliver"
-    },
-    {
-      "type": "@lorehub/meta-schema",
-      "apiVersion": "1.0.0",
-      "id": "97dbd876-117c-48a1-a7a5-2841edc58136",
-      "name": "mood",
-      "schemaType": "text"
-    },
-    {
-      "type": "@lorehub/meta-schema",
-      "apiVersion": "1.0.0",
-      "id": "f1752f55-4a68-4289-9e11-b1a91620f926",
-      "name": "wait",
-      "schemaType": "integer"
-    },
-    {
-      "type": "@lorehub/dialogue-node",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001",
-      "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000001",
-      "optionsIds": [
-        "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
-        "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
+	{
+	  "type": "@lorehub/dialogue",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c",
+	  "name": "Tavern: Kael the barkeep"
+	},
+	{
+	  "type": "@lorehub/variable",
+	  "apiVersion": "1.0.0",
+	  "id": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
+	  "name": "gold",
+	  "variableType": "unsignedNumber",
+	  "defaultValue": "5"
+	},
+	{
+	  "type": "@lorehub/variable",
+	  "apiVersion": "1.0.0",
+	  "id": "f7fbdcd0-60ac-407e-9239-bb3214119298",
+	  "name": "met_kael",
+	  "variableType": "boolean",
+	  "defaultValue": "false"
+	},
+	{
+	  "type": "@lorehub/variable",
+	  "apiVersion": "1.0.0",
+	  "id": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
+	  "name": "trust",
+	  "variableType": "number",
+	  "defaultValue": "0"
+	},
+	{
+	  "type": "@lorehub/document",
+	  "apiVersion": "1.0.0",
+	  "id": "ca2f5193-a3e0-41dd-830a-491132090d34",
+	  "name": "Kael"
+	},
+	{
+	  "type": "@lorehub/document",
+	  "apiVersion": "1.0.0",
+	  "id": "031476c0-2504-4ed7-aa79-e5fce21e2091",
+	  "name": "Oliver"
+	},
+	{
+	  "type": "@lorehub/meta-schema",
+	  "apiVersion": "1.0.0",
+	  "id": "97dbd876-117c-48a1-a7a5-2841edc58136",
+	  "name": "mood",
+	  "schemaType": "text"
+	},
+	{
+	  "type": "@lorehub/meta-schema",
+	  "apiVersion": "1.0.0",
+	  "id": "f1752f55-4a68-4289-9e11-b1a91620f926",
+	  "name": "wait",
+	  "schemaType": "integer"
+	},
+	{
+	  "type": "@lorehub/dialogue-node",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001",
+	  "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000001",
+	  "optionsIds": [
+		"dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
+		"dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
         "bbbbbbbb-0000-4000-8000-000000000003"
-      ],
-      "setVariableOnStart": [
-        {
-          "variableId": "f7fbdcd0-60ac-407e-9239-bb3214119298",
-          "value": "true"
-        }
-      ],
-      "metaData": [
-        {
-          "metaSchemaId": "97dbd876-117c-48a1-a7a5-2841edc58136",
-          "metaSchemaValue": "grumpy"
-        },
-        {
-          "metaSchemaId": "f1752f55-4a68-4289-9e11-b1a91620f926",
-          "metaSchemaValue": "2"
-        }
-      ],
-      "stateData": {
-        "played": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002",
-      "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000002",
-      "setVariableOnStart": [
-        {
-          "variableId": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
-          "value": "10",
-          "operation": "subtract"
-        },
-        {
-          "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
-          "value": "1",
-          "operation": "add"
-        }
-      ],
-      "stateData": {
-        "played": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
-      "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000003",
-      "setVariableOnStart": [
-        {
-          "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
-          "value": "2",
-          "operation": "add"
-        }
-      ],
-      "stateData": {
-        "played": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
-      "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000004",
-      "stateData": {
-        "played": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000006",
-      "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000006",
-      "stateData": {
-        "played": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node-option",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
-      "text": "Buy a drink (10 gold)",
-      "requiredVariables": [
-        {
-          "variableId": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
-          "value": "10",
-          "operator": ">="
-        }
-      ],
-      "stateData": {
-        "selected": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node-option",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
-      "text": "Ask about the road",
-      "requiredVariables": [
-        {
-          "variableId": "bbbbbbbb-0000-4000-8000-000000000002",
-          "value": "false",
-          "kind": "stateData.isOptionSelected"
-        }
-      ],
-      "stateData": {
-        "selected": false
-      }
-    },
-    {
-      "type": "@lorehub/dialogue-node-option",
-      "apiVersion": "2.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000003",
-      "text": "Leave",
-      "stateData": {
-        "selected": false
-      }
-    },
-    {
-      "type": "@lorehub/content-block",
-      "apiVersion": "1.0.0",
-      "id": "aaaaaaaa-0000-4000-8000-000000000001",
-      "content": [
-        {
-          "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
-          "text": null
-        },
-        {
-          "text": "Back again, traveller?"
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/content-block",
-      "apiVersion": "1.0.0",
-      "id": "aaaaaaaa-0000-4000-8000-000000000002",
-      "content": [
-        {
-          "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
-          "text": "Barkeep"
-        },
-        {
-          "text": "Kael pours you a drink."
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/content-block",
-      "apiVersion": "1.0.0",
-      "id": "aaaaaaaa-0000-4000-8000-000000000003",
-      "content": [
-        {
-          "documentId": "031476c0-2504-4ed7-aa79-e5fce21e2091",
-          "text": null
-        },
-        {
-          "text": "The road north is closed."
-        },
-        {
-          "text": "Has been for a week."
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/content-block",
-      "apiVersion": "1.0.0",
-      "id": "aaaaaaaa-0000-4000-8000-000000000004",
-      "content": [
-        {
-          "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
-          "text": null
-        },
-        {
-          "text": "Fine. I'll tell you a secret."
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/content-block",
-      "apiVersion": "1.0.0",
-      "id": "aaaaaaaa-0000-4000-8000-000000000006",
-      "content": [
-        {
-          "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
-          "text": null
-        },
-        {
-          "text": "Safe travels."
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000001",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000002",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002"
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000003",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003"
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000004",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000003",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000006",
-      "requiredVariables": [
-        {
-          "variableId": "aaaaaaaa-0000-4000-8000-000000000004",
-          "value": "true",
-          "kind": "stateData.isNodePlayed"
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000005",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000006",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
-      "requiredVariables": [
-        {
-          "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
-          "value": "3",
-          "operator": ">="
-        }
-      ]
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000007",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
-    },
-    {
-      "type": "@lorehub/dialogue-link",
-      "apiVersion": "1.0.0",
-      "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000008",
-      "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
-      "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
-    }
+	  ],
+	  "setVariableOnStart": [
+		{
+		  "variableId": "f7fbdcd0-60ac-407e-9239-bb3214119298",
+		  "value": "true"
+		}
+	  ],
+	  "metaData": [
+		{
+		  "metaSchemaId": "97dbd876-117c-48a1-a7a5-2841edc58136",
+		  "metaSchemaValue": "grumpy"
+		},
+		{
+		  "metaSchemaId": "f1752f55-4a68-4289-9e11-b1a91620f926",
+		  "metaSchemaValue": "2"
+		}
+	  ],
+	  "stateData": {
+		"played": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002",
+	  "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000002",
+	  "setVariableOnStart": [
+		{
+		  "variableId": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
+		  "value": "10",
+		  "operation": "subtract"
+		},
+		{
+		  "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
+		  "value": "1",
+		  "operation": "add"
+		}
+	  ],
+	  "stateData": {
+		"played": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
+	  "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000003",
+	  "setVariableOnStart": [
+		{
+		  "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
+		  "value": "2",
+		  "operation": "add"
+		}
+	  ],
+	  "stateData": {
+		"played": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
+	  "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000004",
+	  "stateData": {
+		"played": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000006",
+	  "contentBlockId": "aaaaaaaa-0000-4000-8000-000000000006",
+	  "stateData": {
+		"played": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node-option",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
+	  "text": "Buy a drink (10 gold)",
+	  "requiredVariables": [
+		{
+		  "variableId": "3b0c3e4e-5b1c-4a55-8f0a-5f7d1d2a9b11",
+		  "value": "10",
+		  "operator": ">="
+		}
+	  ],
+	  "stateData": {
+		"selected": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node-option",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
+	  "text": "Ask about the road",
+	  "requiredVariables": [
+		{
+		  "variableId": "bbbbbbbb-0000-4000-8000-000000000002",
+		  "value": "false",
+		  "kind": "stateData.isOptionSelected"
+		}
+	  ],
+	  "stateData": {
+		"selected": false
+	  }
+	},
+	{
+	  "type": "@lorehub/dialogue-node-option",
+	  "apiVersion": "2.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000003",
+	  "text": "Leave",
+	  "stateData": {
+		"selected": false
+	  }
+	},
+	{
+	  "type": "@lorehub/content-block",
+	  "apiVersion": "1.0.0",
+	  "id": "aaaaaaaa-0000-4000-8000-000000000001",
+	  "content": [
+		{
+		  "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
+		  "text": null
+		},
+		{
+		  "text": "Back again, traveller?"
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/content-block",
+	  "apiVersion": "1.0.0",
+	  "id": "aaaaaaaa-0000-4000-8000-000000000002",
+	  "content": [
+		{
+		  "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
+		  "text": "Barkeep"
+		},
+		{
+		  "text": "Kael pours you a drink."
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/content-block",
+	  "apiVersion": "1.0.0",
+	  "id": "aaaaaaaa-0000-4000-8000-000000000003",
+	  "content": [
+		{
+		  "documentId": "031476c0-2504-4ed7-aa79-e5fce21e2091",
+		  "text": null
+		},
+		{
+		  "text": "The road north is closed."
+		},
+		{
+		  "text": "Has been for a week."
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/content-block",
+	  "apiVersion": "1.0.0",
+	  "id": "aaaaaaaa-0000-4000-8000-000000000004",
+	  "content": [
+		{
+		  "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
+		  "text": null
+		},
+		{
+		  "text": "Fine. I'll tell you a secret."
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/content-block",
+	  "apiVersion": "1.0.0",
+	  "id": "aaaaaaaa-0000-4000-8000-000000000006",
+	  "content": [
+		{
+		  "documentId": "ca2f5193-a3e0-41dd-830a-491132090d34",
+		  "text": null
+		},
+		{
+		  "text": "Safe travels."
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000001",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000002",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000001",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002"
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000003",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000002",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003"
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000004",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001/dialogue-node-option/bbbbbbbb-0000-4000-8000-000000000003",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000006",
+	  "requiredVariables": [
+		{
+		  "variableId": "aaaaaaaa-0000-4000-8000-000000000004",
+		  "value": "true",
+		  "kind": "stateData.isNodePlayed"
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000005",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000002",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000006",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
+	  "requiredVariables": [
+		{
+		  "variableId": "5d2c8a10-7e4f-4b0b-9c63-2f1e8d7a4c55",
+		  "value": "3",
+		  "operator": ">="
+		}
+	  ]
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000007",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000003",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
+	},
+	{
+	  "type": "@lorehub/dialogue-link",
+	  "apiVersion": "1.0.0",
+	  "id": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-link/cccccccc-0000-4000-8000-000000000008",
+	  "from": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000004",
+	  "to": "dialogue/6147dcb9-b8bd-4238-9c8b-5b773260570c/dialogue-node/aaaaaaaa-0000-4000-8000-000000000001"
+	}
   ]
 }

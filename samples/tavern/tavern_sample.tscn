@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://dijltcbxkd4rf"]
 
-[ext_resource type="Script" path="res://samples/tavern/tavern_sample.gd" id="1_sample"]
+[ext_resource type="Script" uid="uid://bbc7kn2d7gvvj" path="res://samples/tavern/tavern_sample.gd" id="1_sample"]
 
-[node name="TavernSample" type="Control"]
+[node name="TavernSample" type="Control" unique_id=1717335307]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
