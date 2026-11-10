@@ -3,7 +3,7 @@
 All notable changes to LoreHub Dialogue Player for Godot. The version follows the OSF schema version. Each release
 copies its section into the GitHub release notes and the Godot Asset Store changelog.
 
-## 0.0.0
+## 0.1.0
 
 First build.
 
