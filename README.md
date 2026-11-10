@@ -9,33 +9,69 @@ options, links with conditions, number and boolean variables, played and selecte
 Pure GDScript: works in the standard and .NET builds of Godot and in every export target, web included. Open source
 under MIT at [lostwood-games/lorehub-dialogue-player-godot](https://github.com/lostwood-games/lorehub-dialogue-player-godot).
 
-## Sample project
+![The tavern sample playing a LoreHub dialogue in Godot](https://raw.githubusercontent.com/lostwood-games/lorehub-dialogue-player-godot/main/docs/images/tavern-sample.png)
 
-Open the repo folder in Godot 4.3+ and press Play. `samples/tavern/` is a small game screen built on `LoreHubRunner`
-with its own UI: a typewriter line with a speaker badge, choices, node meta data driving the scene (`mood` tints the
-background, `wait` delays the line), gold buttons that feed game state into LoreHub variables, and save/load
-mid-dialogue. `demo/` shows the drop-in `LoreHubDialogueBox`. Both play `demo/tavern.json`, a LoreHub export.
+## Quick start
 
-## Install
+From a dialogue in LoreHub to a dialogue on screen in four steps, no code.
 
-1. Copy `addons/lorehub_dialogue` into your project's `addons/` folder (or install it from the Godot Asset Store).
-2. Enable **LoreHub Dialogue** in **Project > Project Settings > Plugins**.
+### 1. Install the addon
 
-## Get a dialogue from LoreHub
+In the editor's **Asset Store** tab search for **LoreHub** and install LoreHub Dialogue Player, or download the zip
+from [Releases](https://github.com/lostwood-games/lorehub-dialogue-player-godot/releases) and copy
+`addons/lorehub_dialogue` into your project's `addons/` folder. Then turn on **LoreHub Dialogue** in
+**Project > Project Settings > Plugins**.
 
-In LoreHub open the dialogue, click **Export** and **Export JSON**, and put the `.json` file in your project. Godot
-loads `.json` files as `JSON` resources and packs them into exported games, so there is nothing to convert.
+![LoreHub Dialogue turned on in Project Settings > Plugins](https://raw.githubusercontent.com/lostwood-games/lorehub-dialogue-player-godot/main/docs/images/enable-plugin.png)
 
-Files downloaded at runtime load too: `LoreHubDialogue.from_source("user://intro.json")` takes a path, a `JSON`
-resource, a parsed Dictionary or JSON text.
+### 2. Export the dialogue from LoreHub
 
-## Play it
+In [LoreHub](https://app.lorehub.app) open the dialogue, go to **Export** and click **Export JSON**. You get a `.json`
+file in LoreHub's [Export Schema v2](https://lorehub.app/documentation/dialogue-schema-api/export-schema-v2) with the
+dialogue's nodes, options, links, variables, characters and node meta data.
 
-The quickest way is the sample dialogue box: instance `addons/lorehub_dialogue/ui/lorehub_dialogue_box.tscn` and call
+![Export JSON in LoreHub](https://raw.githubusercontent.com/lostwood-games/lorehub-dialogue-player-godot/main/docs/images/lorehub-export.png)
+
+### 3. Put the file in your project
+
+Drop the `.json` file anywhere under `res://`, for example `res://dialogues/tavern.json`. Godot imports `.json` files
+as `JSON` resources and packs them into exported games, so there is nothing to convert. When the dialogue changes in
+LoreHub, export it again and overwrite the file.
+
+### 4. Play it
+
+Add the sample dialogue box to a scene: drag `addons/lorehub_dialogue/ui/lorehub_dialogue_box.tscn` into the scene
+tree (or use **Instantiate Child Scene**). In the Inspector, drag your `.json` file onto **Dialogue** and turn on
+**Autostart**.
+
+![LoreHubDialogueBox with tavern.json in the Dialogue field](https://raw.githubusercontent.com/lostwood-games/lorehub-dialogue-player-godot/main/docs/images/dialogue-box-inspector.png)
+
+Run the scene. The box shows the speaker, the line, a button per option and **Continue** for nodes without options,
+and hides itself when the dialogue ends. Options whose conditions fail are left out: here the player has 5 gold, so
+"Buy a drink (10 gold)" is hidden.
+
+![The dialogue box running in the game](https://raw.githubusercontent.com/lostwood-games/lorehub-dialogue-player-godot/main/docs/images/dialogue-box-game.png)
+
+To start it from code instead of Autostart:
 
 ```gdscript
 $LoreHubDialogueBox.play(preload("res://dialogues/tavern.json"))
 ```
+
+The box is a sample: copy the scene and restyle it, or build your own UI on the runner below.
+
+Files downloaded at runtime load too: `LoreHubDialogue.from_source("user://intro.json")` takes a path, a `JSON`
+resource, a parsed Dictionary or JSON text.
+
+## Sample project
+
+Open this repo folder in Godot 4.3+ and press Play. `samples/tavern/` (the screenshot at the top) is a small game
+screen built on `LoreHubRunner` with its own UI: a typewriter line with a speaker badge, choices, node meta data
+driving the scene (`mood` tints the background, `wait` delays the line), gold buttons that feed game state into
+LoreHub variables, and save/load mid-dialogue. `demo/` shows the drop-in `LoreHubDialogueBox`. Both play
+`demo/tavern.json`, a LoreHub export.
+
+## Your own UI
 
 For your own UI, use the runner:
 
@@ -63,7 +99,7 @@ func _on_continue() -> void:
 	runner.advance()
 ```
 
-### Rules
+## Rules
 
 - Entering a node applies the variables it sets (number variables can be added to or subtracted from; an
   `unsignedNumber` never goes below 0) and marks it played.
@@ -74,13 +110,13 @@ func _on_continue() -> void:
 - Conditions can check variables (`==`, `!=`, `<`, `<=`, `>`, `>=` for numbers) or whether a node was played or an
   option selected.
 
-### Save and load
+## Save and load
 
 `runner.get_state()` returns a plain Dictionary (variables by name, played nodes, selected options, current node)
 that you can store with your save. `runner.set_state(state)` puts it back; call `runner.resume()` to show the
 current line again.
 
-### From C#
+## From C#
 
 The addon is GDScript, so call it through Godot's API:
 
