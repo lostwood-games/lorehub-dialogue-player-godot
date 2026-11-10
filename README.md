@@ -1,5 +1,7 @@
 # LoreHub Dialogue for Godot
 
+[![CI](https://github.com/lostwood-games/lorehub-dialogue-player-godot/actions/workflows/ci.yml/badge.svg)](https://github.com/lostwood-games/lorehub-dialogue-player-godot/actions/workflows/ci.yml)
+
 Play dialogues written in [LoreHub](https://lorehub.app) in Godot 4.3 and later. The addon reads LoreHub's
 [Export Schema v2](https://lorehub.app/documentation) and follows the same rules as the player in LoreHub: nodes,
 options, links with conditions, number and boolean variables, played and selected state, and node meta data.
