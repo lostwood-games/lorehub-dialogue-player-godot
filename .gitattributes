@@ -1,0 +1,7 @@
+# Asset Library and Asset Store downloads of the public mirror carry only the addon.
+/demo export-ignore
+/tests export-ignore
+/project.godot export-ignore
+/.gitattributes export-ignore
+/.github export-ignore
+/CHANGELOG.md export-ignore

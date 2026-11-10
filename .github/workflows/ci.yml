@@ -1,0 +1,80 @@
+name: CI
+
+# Pull requests and pushes to main: headless tests on the oldest supported and current Godot.
+# A pushed v* tag (v0.0.0): the tests, then a check that the tag matches plugin.cfg, a zip holding only
+# addons/lorehub_dialogue (with LICENSE and README), a GitHub release with that zip and the version's CHANGELOG.md
+# section, and a job summary with the fields to paste into the Godot Asset Store. The store has no upload API yet
+# (a CLI is on store.godotengine.org/roadmap), so the zip is uploaded by hand in the asset's Versions tab.
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    name: Tests (Godot ${{ matrix.godot }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Oldest supported and a current stable release.
+        godot: ["4.3-stable", "4.7.2-stable"]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download Godot
+        run: |
+          curl -sSL -o /tmp/godot.zip "https://github.com/godotengine/godot/releases/download/${{ matrix.godot }}/Godot_v${{ matrix.godot }}_linux.x86_64.zip"
+          unzip -q /tmp/godot.zip -d /tmp/godot
+          mv /tmp/godot/Godot_v${{ matrix.godot }}_linux.x86_64 /tmp/godot/godot
+      - name: Import the project
+        run: /tmp/godot/godot --headless --path . --import
+      - name: Run tests
+        run: /tmp/godot/godot --headless --path . -s res://tests/run_tests.gd
+
+  release:
+    name: Release
+    needs: test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check the tag matches plugin.cfg
+        run: |
+          version=$(grep -m1 '^version=' addons/lorehub_dialogue/plugin.cfg | cut -d'"' -f2)
+          test "v$version" = "${GITHUB_REF_NAME}" || { echo "Tag ${GITHUB_REF_NAME} does not match version $version in plugin.cfg"; exit 1; }
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+      - name: Build the zip
+        run: |
+          cp README.md addons/lorehub_dialogue/README.md
+          zip -qr "lorehub-dialogue-player-godot-${VERSION}.zip" addons/lorehub_dialogue -x '*.gitignore' '*.gitattributes'
+          unzip -l "lorehub-dialogue-player-godot-${VERSION}.zip"
+      - name: Release notes from CHANGELOG.md
+        run: |
+          awk -v v="$VERSION" '$0 ~ "^## \\[?v?"v"\\]?( |$)" {on=1; next} /^## / {if (on) exit} on' CHANGELOG.md > notes.md
+          test -s notes.md || { echo "CHANGELOG.md has no section for $VERSION"; exit 1; }
+      - name: Create the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" "lorehub-dialogue-player-godot-${VERSION}.zip" --title "LoreHub Dialogue Player for Godot ${VERSION}" --notes-file notes.md
+      - name: Asset Store fields
+        run: |
+          {
+            echo "## Upload to the Godot Asset Store"
+            echo "Open the asset on https://store.godotengine.org, Versions tab, add a version with:"
+            echo ""
+            echo "- **Version:** ${VERSION}"
+            echo "- **File:** lorehub-dialogue-player-godot-${VERSION}.zip from the [GitHub release](${{ github.server_url }}/${{ github.repository }}/releases/tag/${GITHUB_REF_NAME})"
+            echo "- **Minimum Godot version:** 4.3"
+            echo "- **Changelog:**"
+            echo ""
+            cat notes.md
+          } >> "$GITHUB_STEP_SUMMARY"

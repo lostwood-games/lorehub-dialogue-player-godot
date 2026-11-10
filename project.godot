@@ -1,0 +1,13 @@
+; Demo and test project for the LoreHub Dialogue addon. Only addons/lorehub_dialogue ships to users.
+
+config_version=5
+
+[application]
+
+config/name="LoreHub Dialogue Demo"
+run/main_scene="res://demo/demo.tscn"
+config/features=PackedStringArray("4.3")
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lorehub_dialogue/plugin.cfg")
