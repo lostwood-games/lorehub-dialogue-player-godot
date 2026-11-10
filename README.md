@@ -7,6 +7,13 @@ options, links with conditions, number and boolean variables, played and selecte
 Pure GDScript: works in the standard and .NET builds of Godot and in every export target, web included. Open source
 under MIT at [lostwood-games/lorehub-dialogue-player-godot](https://github.com/lostwood-games/lorehub-dialogue-player-godot).
 
+## Sample project
+
+Open the repo folder in Godot 4.3+ and press Play. `samples/tavern/` is a small game screen built on `LoreHubRunner`
+with its own UI: a typewriter line with a speaker badge, choices, node meta data driving the scene (`mood` tints the
+background, `wait` delays the line), gold buttons that feed game state into LoreHub variables, and save/load
+mid-dialogue. `demo/` shows the drop-in `LoreHubDialogueBox`. Both play `demo/tavern.json`, a LoreHub export.
+
 ## Install
 
 1. Copy `addons/lorehub_dialogue` into your project's `addons/` folder (or install it from the Godot Asset Store).

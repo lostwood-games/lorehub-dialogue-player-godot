@@ -5,3 +5,4 @@
 /.gitattributes export-ignore
 /.github export-ignore
 /CHANGELOG.md export-ignore
+/samples export-ignore

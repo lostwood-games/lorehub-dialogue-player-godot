@@ -5,7 +5,7 @@ config_version=5
 [application]
 
 config/name="LoreHub Dialogue Demo"
-run/main_scene="res://demo/demo.tscn"
+run/main_scene="res://samples/tavern/tavern_sample.tscn"
 config/features=PackedStringArray("4.3")
 
 [editor_plugins]
